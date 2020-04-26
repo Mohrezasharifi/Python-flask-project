@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top ">
+  <a class="navbar-brand text-white" href="/home"><b>PersonalBlog</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-white" href="/home"><b>HOME</b> <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item active text-white">
+        <a class="nav-link text-white" href="/team"><b>OUR TEAM</b></a>
+      </li>
+      
+       <li class="nav-item active text-white">
+        <a class="nav-link text-white" href="/about"><b>ABOUT</b></a>
+      </li>
+
+      <li class="nav-item active text-white">
+        <a class="nav-link text-white" href="/posts"><b>POSTS</b></a>
+      </li>
+      
+        {% if session.logged_in %}
+      <li class="nav-item active" style="position: absolute; right: 10px;">
+        <a class="nav-link" href="/logout"  style="color: red; "><i class="fas fa-sign-out-alt"></i><b> LOGOUT</b></a>
+      </li> 
+
+       <li class="nav-item active" style="position: absolute; right: 100px;">
+        <a class="nav-link" href="/dashboard"  style="color: white; "><i class="fas fa-sign-out-alt"></i><b> DASHBOARD</b></a>
+      </li> 
+
+       
+  {% else %}
+  <div class="form-inline my-5 my-lg-0" style="position: absolute; right: 10px; top: 15px;">
+       <li class="nav-item">
+        <a class=" mr-sm-2 text-white" href="/register">
+          <i class="fas fa-user-plus mr-1"></i>
+          <b>SIGN UP</b>
+       </a>
+      </li>
+
+       <li class="nav-item">
+        <a class=" my-2 my-sm-0 text-white" href="/login">
+          <i class="fas fa-sign-in-alt mr-1"></i>
+           <b>LOGIN</b>
+         </a>
+      </li>
+  </div>
+        {% endif %}
+    <!-- 
+       <li class="nav-item active">
+        <a class="nav-link" href="register" id="sign_up">SIGN UP</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/login" id="sign_in">SIGN IN</a>
+      </li>
+       -->
+    </ul>
+    
+  </div>
+</nav>
+

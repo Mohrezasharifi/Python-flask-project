@@ -1,0 +1,135 @@
+{% extends 'layout.html' %}
+{% block body %}
+<head>
+<style type="text/css">
+	
+	@media (min-width: 320px) and (max-width: 480px)
+	{
+       .first
+       {
+       	 width: 315px !important;
+       }
+
+	}
+
+  .first
+  {
+  	width:560px;
+  	 height: 500px;
+  }
+    .second
+  {
+  	width:560px;
+  	 height: 500px;
+  }
+    .third
+  {
+  	width:560px;
+  	 height: 600px;
+  }
+
+
+   #vision
+   {
+   	font-size: 18px;
+  	line-height: 30px;
+   }
+    #mision
+   {
+   	font-size: 18px;
+  	line-height: 30px;
+   }
+  #work{
+  	font-size: 18px;
+  	line-height: 30px;
+  }
+
+</style>
+</head>
+
+<div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+	  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+	  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner h-50">
+	  <div class="carousel-item active">
+		<img src="https://images.unsplash.com/photo-1478641300939-0ec5188d3802?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80" style="height:350px !important" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+		  <h5>Writing Posts</h5>
+		  <p>Writing posts will keep updated about your surroundings</p>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+		<img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" style="height:350px !important" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+		  <h5>Books Are Good Friends</h5>
+		  <p>Read Here More<a href="/articles"></a></p>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+		<img src="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" style="height:350px !important" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+		  <h5>BrainStorm your mind</h5>
+		  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+		</div>
+	  </div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Next</span>
+	</a>
+  </div>
+</div>
+
+
+<div class="para ">
+	
+<!-- Main -->
+	  
+<br>
+<body class="servicebody">
+
+<hr> 
+
+<!-- How it works -->
+<div id="values" class="container-fluid py-2" >
+		<center>
+	        <div class="row col-11">
+	            <div class="col-sm-6 col-xs-12">
+	                <div class="container-fluid px-0">
+	                	<img class="third" src="https://images.unsplash.com/photo-1550068885-11b2abfd7741?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=782&q=80" alt="third-image">
+	                </div>   	
+	            </div>
+	 	        <div class="col-sm-6 col-xs-12" id="work">
+		            <div class="container-fluid rounded bg-light text-justify py-3">
+                                                   	  <h4><b>HOW IT WORKS:</b></h4>
+	  <p>
+<i class="fas fa-hand-point-right"></i> <b>STEP 1: </b>
+Uploading your statement/post in word format where you will need to provide your email address, mobile number and the communication will be done through our own developed <b>Chatroom</b>. As the editor might need to ask you questions regarding your submitted post, then you will require to be in contact with the editor. 
+<br>
+<i class="fas fa-hand-point-right"></i> <b>STEP 2:</b> 
+Your submitted post will be accepted by the admin where he will need to look for which one of the editor has the time to undertake the particular task of editing. The post will be sent to the respective editor.<br> 
+<i class="fas fa-hand-point-right"></i> <b>STEP 3: </b>
+After the submission of the post, then the editor will get started to edit the paper. The editor will be provided the communication medium of the user where he might need to communicate and ask questions regarding the paper. He will make use of the <b>Chatroom</b> on the website where the user needs to often check his inbox too.
+</p>                                                                                        
+                         </div>
+	                </div>
+		        </div>            	
+	        </div>			
+		</center>      
+	</div>
+
+
+</body>
+			  
+</div>
+<div class="mb-3">
+
+{% endblock %}

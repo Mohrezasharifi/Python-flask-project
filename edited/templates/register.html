@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<br><br>
+
+<h5><center>REGISTRATION FORM</center></h5>
+<div class="container " style="height: 40%; width: 40%; line-height: 8px; border: 2px solid lightblue; padding: 15px;">
+
+  {% from "navbar/_formhelpers.html" import render_field %}
+           
+  <form method="POST" action="" class="px-10 py-10">           
+                  <div class="form-group">
+                    {{render_field(form.name, class_="form-control")}}
+                  </div>
+                
+                <div class="form-group">
+                    {{render_field(form.email, class="form-control")}}
+                </div>
+                <div class="form-group">
+                    {{render_field(form.username, class="form-control")}}
+                </div>
+                <div class="form-group">
+                    {{render_field(form.password, class="form-control")}}
+                </div>
+            
+             <p>
+                    <input type="submit" class="btn btn-primary btn-block" value="Sign Up">
+                </p>
+                 </form>
+  </div>
+<br>
+{% endblock %}

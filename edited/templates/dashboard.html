@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+	
+	{% block body %}
+	<body class="container text-justify">
+
+
+
+	<br>
+	<h1><center>USER DASHBOARD</center></h1>
+			<div>
+				<p style="font-size: 20px; color: blue; font-style: italic;">
+				Dear <b> {{session.username}} </b>,<br>
+
+			</div>
+<a class="btn btn-success btn-block" href="/add_post"> <i class="fas fa-plus"></i> CLICK TO POST NOW</a><br><br>
+			<div>
+					<table class="table table-striped table-bordered table-sm">
+
+						<tr>	
+							<th> ID</th>
+							<th> Title</th>
+							<th> Author</th>
+							<th> Date</th>
+							<th></th>
+							<th></th>
+
+					</tr>
+								
+								
+							
+					{% for post in posts %}
+					<tr>
+					<td> {{post.id}} </td>
+					<td> {{post.title}} </td>
+					<td> {{post.author}} </td>
+					<td> {{post.create_date}} </td>
+
+					<td><a href="edit_post/{{post.id}}" class="btn btn-primary pull-right">Edit</a></td>
+					<td>
+
+			<form action="{{url_for('delete_post', id=post.id)}}" method="post">
+			<input type="submit" name="Delete" value="Delete" class="btn btn-danger">
+			</form>
+
+					</td>
+
+					</tr>
+					{% endfor %}
+					</table>
+			</div>
+								
+
+
+</body>
+			
+{% endblock %}
+	

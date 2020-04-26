@@ -1,0 +1,24 @@
+<!-- This will take care of errors when we are redirecting to a page. This is also used for flashes
+This is taken from the flask flash messages documentation. 
+We use flash with categories for better clarity and undrestanding. 
+Find this @ flask.pocoo.org/docs/0.12/patterns/flashing/
+-->
+{% with messages = get_flashed_messages(with_categories=true) %}
+<br><br>
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category  }}">{{ message }}</div>
+{% endfor %}
+{% endif %}
+
+{% endwith %}
+<!-- This is used for displaying errors that may happen during the login-->
+{% if error  %}
+<div class="alert alert-danger">{{error}}
+</div>
+{% endif %}
+
+{% if msg  %}
+<div class="alert alert-success">{{msg}}
+</div>
+{% endif %}
