@@ -1,3 +1,4 @@
+(Download or clone the project. Open the Edited folder and run app.py). Make sure to import the given database as well).
 # Python-flask-project
 Python-Flask[Project Based]
 Requirements: 
